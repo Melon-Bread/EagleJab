@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-import os, platform, argparse, socket, sys, struct, easygui
+import os, argparse, socket, sys, struct, easygui
 
 # New & improved args parsing
 parser = argparse.ArgumentParser(description='Sends .CIA files to the 3DS via FBI')
