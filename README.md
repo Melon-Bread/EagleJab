@@ -6,7 +6,10 @@ Additional features added to Falcon Punch.
 * Python 2 Users: *FalconPunch2.py --cia Game.cia --ip 192.168.123*
 
 #### Requirements: 
+* [Python](https://www.python.org/downloads/) 
 * [easygui](https://pypi.python.org/pypi/easygui) - For the GUI compnents
-
-
+ * You can easily install this by typing in the following into the Terminal or Command Prompt: 
+  ```
+  pip install easygui
+  ```
 
