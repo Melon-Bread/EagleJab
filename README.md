@@ -7,7 +7,7 @@ Additional features added to Falcon Punch.
 
 #### Requirements: 
 * [Python](https://www.python.org/downloads/) 
-* [easygui](https://pypi.python.org/pypi/easygui) - For the GUI compnents
+* [easygui](https://pypi.python.org/pypi/easygui) - For GUI components
  * You can easily install this by typing in the following into the Terminal or Command Prompt: 
   ```
   pip install easygui
