@@ -4,13 +4,11 @@ Supports **both** Python 2 & Python 3.
 
 ## Requirements:
 * [Python](https://www.python.org/downloads/)
-* [easygui](https://pypi.python.org/pypi/easygui) - For GUI components
- * You can easily install this by typing in the following into the Terminal or Command Prompt:  
-  `pip install easygui`
 
 ## Usage:
 * In a Terminal or Command Prompt type:  
-`python FalconPunch.py --cia Game.cia --ip 192.168.123`
+`python FalconPunch.py --cia Game.cia --ip 192.168.123`  
+(Python 2 users need to use the `FalconPunch2.py` script)  
 * Double click FalconPunch.py (assuming .py files associated with python), and it will ask you what information it needs.
 
 ## Screenshots
