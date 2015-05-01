@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 import os, argparse, socket, sys, struct, easygui
+import tkinter.messagebox
 
 # New & improved args parsing
 parser = argparse.ArgumentParser(description='Sends .CIA files to the 3DS via FBI')
@@ -39,7 +40,7 @@ while True:
         if args.cia and args.ip:
             print(confirmation)
         else:
-            easygui.msgbox(confirmation, "FalconPunch")
+            tkinter.messagebox.showinfo("Falcon Punch", confirmation)
         break  # EOF
     sock.sendall(chunk)
 
