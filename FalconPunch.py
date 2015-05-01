@@ -1,6 +1,6 @@
 #!/usr/bin/env python
-import os, argparse, socket, sys, struct, easygui
-import tkinter.messagebox, tkinter.filedialog
+import os, argparse, socket, sys, struct
+import tkinter.messagebox, tkinter.filedialog, tkinter.simpledialog
 
 # New & improved args parsing
 parser = argparse.ArgumentParser(description='Sends .CIA files to the 3DS via FBI')
@@ -23,7 +23,7 @@ fbiinfo = struct.pack('!q', statinfo.st_size)
 if args.ip:
     dsip = args.ip[0]
 else:
-    dsip = easygui.enterbox("Enter 3DS' IP:", "FalconPunch", "192.168.1.1")
+    dsip = tkinter.simpledialog.askstring("Falcon Punch", "Enter 3Ds' IP:")
 
 file = open(cia, "rb")
 sock = socket.socket()
@@ -36,7 +36,7 @@ while True:
     chunk = file.read(16384)
     if not chunk:
         # Prints or displays a confirmation based on how the program is given info
-        confirmation = "Sent " + cia + " to the 3DS (" + dsip + ")"
+        confirmation = "Sent: \n" + cia + "\n to the 3DS (" + dsip + ")"
         if args.cia and args.ip:
             print(confirmation)
         else:
