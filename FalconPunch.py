@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 import os, argparse, socket, sys, struct, easygui
-import tkinter.messagebox
+import tkinter.messagebox, tkinter.filedialog
 
 # New & improved args parsing
 parser = argparse.ArgumentParser(description='Sends .CIA files to the 3DS via FBI')
@@ -13,8 +13,8 @@ args = parser.parse_args()
 if args.cia:
     cia = args.cia[0]
 else:
-    cia = easygui.fileopenbox("Choose CIA to Send", "Falcon Punch", default="/", filetypes=["*.cia", "*.*"],
-                              multiple=False)
+    cia = tkinter.filedialog.askopenfilename(title="Falcon Punch - Choose CIA to Send", initialdir="/",
+                                             defaultextension=".cia", filetypes=[("CIA File", "*.cia")], multiple=False)
 
 statinfo = os.stat(cia)
 fbiinfo = struct.pack('!q', statinfo.st_size)
