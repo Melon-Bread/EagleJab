@@ -1,9 +1,9 @@
 # EagleJab
 Additional features & GUI added to Falcon Punch
-Supports **both** Python 2 & Python 3.
+Supports Python 2.
 
 ## Requirements:
-* [Python 3](https://www.python.org/downloads/)
+* [Python 2](https://www.python.org/downloads/)
 
 ## Usage:
 * In a Terminal or Command Prompt type:  
