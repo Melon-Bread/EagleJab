@@ -3,13 +3,13 @@ Additional features & GUI added to Falcon Punch
 Supports **both** Python 2 & Python 3.
 
 ## Requirements:
-* [Python](https://www.python.org/downloads/)
+* [Python 3](https://www.python.org/downloads/)
 
 ## Usage:
 * In a Terminal or Command Prompt type:  
 `python EagleJab.py --cia Game.cia --ip 192.168.123`  
-(Python 2 users need to use the `EagleJab2.py` script)  
-* Double click EagleJab.py (assuming .py files associated with python), and it will ask you what information it needs.
+
+* Or double click EagleJab.py (assuming .py files associated with python), and it will ask you what information it needs.
 
 ## Screenshots
 * Asking for .CIA:  
