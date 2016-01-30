@@ -16,7 +16,7 @@ args = parser.parse_args()
 if args.cia:
     cia = args.cia[0]
 else:
-    cia = tkFileDialog.askopenfilename(title=u"Falcon Punch - Choose CIA to Send", initialdir=u"/",
+    cia = tkFileDialog.askopenfilename(title=u"Eagle Jab - Choose CIA to Send", initialdir=u"/",
                                              defaultextension=u".cia", filetypes=[(u"CIA File", u"*.cia")], multiple=False)
 
 statinfo = os.stat(cia)
@@ -26,7 +26,7 @@ fbiinfo = struct.pack(u'!q', statinfo.st_size)
 if args.ip:
     dsip = args.ip[0]
 else:
-    dsip = tkSimpleDialog.askstring(u"Falcon Punch", u"Enter 3Ds' IP:")
+    dsip = tkSimpleDialog.askstring(u"Eagle Jab", u"Enter 3Ds' IP:")
 
 file = open(cia, u"rb")
 sock = socket.socket()
@@ -43,7 +43,7 @@ while True:
         if args.cia and args.ip:
             print confirmation
         else:
-            tkMessageBox.showinfo(u"Falcon Punch", confirmation)
+            tkMessageBox.showinfo(u"Eagle Jab", confirmation)
         break  # EOF
     sock.sendall(chunk)
 
