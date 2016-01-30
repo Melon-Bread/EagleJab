@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 import os, argparse, socket, sys, struct
 import tkinter.messagebox, tkinter.filedialog, tkinter.simpledialog
+import tkinter as tk
 
 # New & improved args parsing
 parser = argparse.ArgumentParser(description='Sends .CIA files to the 3DS via FBI')
@@ -8,6 +9,10 @@ parser.add_argument('-c', '--cia', help='.CIA rom file', metavar='FILE', require
 parser.add_argument('-i', '--ip', help='The IP address of the target 3DS (e.g. 192.168.1.123)', metavar='STRING',
                     required=False, nargs=1)
 args = parser.parse_args()
+
+# Hides the root tk window
+root = tk.Tk()
+root.withdraw()
 
 # Ask for the desired .CIA file if none is given
 if args.cia:
@@ -45,4 +50,5 @@ while True:
     sock.sendall(chunk)
 
 sock.close()
+root.destroy()
 sys.exit()
