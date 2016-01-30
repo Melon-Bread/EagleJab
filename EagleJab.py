@@ -12,7 +12,6 @@ args = parser.parse_args()
 
 # Hides the root tk window
 root = tk.Tk()
-root.iconbitmap('icon.ico')
 root.withdraw()
 
 # Ask for the desired .CIA file if none is given
