@@ -13,7 +13,7 @@ args = parser.parse_args()
 if args.cia:
     cia = args.cia[0]
 else:
-    cia = tkinter.filedialog.askopenfilename(title="Falcon Punch - Choose CIA to Send", initialdir="/",
+    cia = tkinter.filedialog.askopenfilename(title="Eagle Jab - Choose CIA to Send", initialdir="/",
                                              defaultextension=".cia", filetypes=[("CIA File", "*.cia")], multiple=False)
 
 statinfo = os.stat(cia)
@@ -23,7 +23,7 @@ fbiinfo = struct.pack('!q', statinfo.st_size)
 if args.ip:
     dsip = args.ip[0]
 else:
-    dsip = tkinter.simpledialog.askstring("Falcon Punch", "Enter 3Ds' IP:")
+    dsip = tkinter.simpledialog.askstring("Eagle Jab", "Enter 3Ds' IP:")
 
 file = open(cia, "rb")
 sock = socket.socket()
@@ -40,7 +40,7 @@ while True:
         if args.cia and args.ip:
             print(confirmation)
         else:
-            tkinter.messagebox.showinfo("Falcon Punch", confirmation)
+            tkinter.messagebox.showinfo("Eagle Jab", confirmation)
         break  # EOF
     sock.sendall(chunk)
 
